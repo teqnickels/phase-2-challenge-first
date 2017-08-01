@@ -11,7 +11,11 @@ var date = {
   },
   monthOfTheYear: function month( date ) {
     var formattedDate = this.format(date)
-    console.log( new Date (formattedDate) )
+    var date = new Date(date);
+    var dateString = date.toString()
+    var monthArr = dateString.split(' ')
+    
+    return monthArr[1]
   }
 }
 date.monthOfTheYear( '7/12/1981' )
