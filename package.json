@@ -1,0 +1,23 @@
+{
+  "name": "phase-2-challenge-first",
+  "version": "1.0.0",
+  "description": "Phase 2 challenge first attempt",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teqnickels/phase-2-challenge-first.git"
+  },
+  "author": "Debrena McEwen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/teqnickels/phase-2-challenge-first/issues"
+  },
+  "homepage": "https://github.com/teqnickels/phase-2-challenge-first#readme",
+  "devDependencies": {
+    "chai": "^4.1.0",
+    "mocha": "^3.5.0"
+  }
+}
