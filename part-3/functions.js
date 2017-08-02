@@ -1,4 +1,4 @@
-var func = {
+var funcProps = {
   nameProps: function nameProps(obj)  {
     if( Object.prototype.toString.call( obj ) !== '[object Object]' ) {
       return  'Invalid Entry'
@@ -22,7 +22,9 @@ let family = {
 let codes = [1,2,3,4]
 
 
-func.nameProps(friend)
-func.nameProps(family)
-func.nameProps(codes)
-func.nameProps('hello')
+funcProps.nameProps(friend)
+funcProps.nameProps(family)
+funcProps.nameProps(codes)
+funcProps.nameProps('hello')
+
+module.exports = { funcProps }

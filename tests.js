@@ -2,6 +2,7 @@ import chai, { expect } from 'chai'
 import chaiChange from 'chai-change'
 import { dateObj } from './part-1/functions'
 import { func } from './part-2/functions'
+import { funcProps } from './part-3/functions'
 
 chai.use(chaiChange)
 
@@ -16,8 +17,8 @@ describe('dateObj', () => {
   it( 'takes a date in the format of "00/00/0000" and returns returns a formatted date unless entry is invalid in which an error will be thrown',() => {
 
     expect(dateObj.format.bind('September 7th 1992')).to.throw('Invalid Entry undefined')
-      })
     })
+  })
 
   context( 'dateObj.monthOfTheYear()', () => {
   it( 'takes a date in the format of "00/00/0000" and returns the month of the year',() => {
@@ -25,8 +26,8 @@ describe('dateObj', () => {
     expect( dateObj.monthOfTheYear( '8/12/1981') ).to.equal( 'Aug' )
     expect( dateObj.monthOfTheYear( 'September 7th 1992') ).to.equal(undefined)
 
-      })
     })
+  })
 })
 
 describe('func', () => {
@@ -43,7 +44,25 @@ describe('func', () => {
     expect( func.reverseSentence( '123' ) ).to.equal( "'123'")
     expect( func.reverseSentence( 3432423432 ) ).to.equal( 'invalid input' )
 
+    })
+  })
+})
+
+  describe('funcProps', () => {
+    'use strict'
+
+    it('exists', () => {
+      expect( { funcProps } ).to.be.a('object')
+    })
+    context( 'funcProps.nameProps()', () => {
+    it( 'takes an object and returns the keys in alphabetical order',() => {
+      let friend = { name: 'Dominique', age: 30, phone: '555-555-5555' }
+      let family = { name: 'Diane' }
+      let codes = [1,2,3,4]
+
+      expect( funcProps.nameProps(friend) ).to.eql([ 'age', 'name', 'phone' ])
+      expect( funcProps.nameProps(family)).to.eql([ 'name' ])
+      expect( funcProps.nameProps(codes)).to.equal('Invalid Entry')
       })
     })
-
-})
+  })
