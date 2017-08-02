@@ -1,13 +1,11 @@
 var func = {
   nameProps: function nameProps(obj)  {
-    if( Object.prototype.toString.call( obj ) === '[object Array]' ) {
-      return 'Invalid Entry'
+    if( Object.prototype.toString.call( obj ) !== '[object Object]' ) {
+      return  'Invalid Entry'
+    }else{
+      var arr = Object.keys(obj);
+      return arr.sort()
     }
-    var arr = Object.keys(obj);
-    console.log(arr.length);
-
-    console.log(arr.sort(function(a, b) {
-      return a-b}));
   }
 }
 
@@ -27,3 +25,4 @@ let codes = [1,2,3,4]
 func.nameProps(friend)
 func.nameProps(family)
 func.nameProps(codes)
+func.nameProps('hello')
