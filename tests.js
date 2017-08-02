@@ -41,6 +41,8 @@ describe('func', () => {
     expect( func.reverseSentence('I am testing this string.') ).to.equal( "'string. this testing am I'" )
     expect( func.reverseSentence( 'string.' ) ).to.equal( "'string.'")
     expect( func.reverseSentence( '123' ) ).to.equal( "'123'")
+    expect( func.reverseSentence( 3432423432 ) ).to.equal( 'invalid input' )
+
       })
     })
 
