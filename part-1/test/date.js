@@ -1,6 +1,7 @@
 import chai, { expect } from 'chai'
 import chaiChange from 'chai-change'
 import { dateObj } from '../src/date'
+var should = require('chai').should();
 
 chai.use(chaiChange)
 
@@ -11,11 +12,18 @@ describe('dateObj', () => {
     expect( { dateObj } ).to.be.a('object')
   })
 
-  context('funcs.dayOfWeek()', () => {
-  it('takes a date and returns the day of week',() => {
-    expect(funcs.dayOfWeek(99, 5, 14)).to.equal( 'Thursday' )
-    expect(funcs.dayOfWeek(99, 5, 15)).to.equal( 'Friday' )
-    expect(funcs.dayOfWeek(99, 5, 'blue')).to.equal( 'Error, invalid input' )
+  context( 'dateObj.format()', () => {
+  it( 'takes a date in the format of "00/00/0000" and returns the month of the year',() => {
+    expect( dateObj.format( 'September 7th 1992') ).to.throw(Error, 'Invalid Entry September 7th 1992')
+      })
+    })
+
+  context( 'dateObj.monthOfTheYear()', () => {
+  it( 'takes a date in the format of "00/00/0000" and returns the month of the year',() => {
+    expect( dateObj.monthOfTheYear( '7/12/1981') ).to.equal( 'Jul' )
+    expect( dateObj.monthOfTheYear( '8/12/1981') ).to.equal( 'Aug' )
+    expect( dateObj.monthOfTheYear( 'September 7th 1992') ).to.equal(undefined)
+
       })
     })
 
