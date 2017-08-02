@@ -9,22 +9,4 @@ var funcProps = {
   }
 }
 
-let friend = {
-  name: 'Dominique',
-  age: 30,
-  phone: '555-555-5555'
-}
-
-let family = {
-  name: 'Diane',
-}
-
-let codes = [1,2,3,4]
-
-
-funcProps.nameProps(friend)
-funcProps.nameProps(family)
-funcProps.nameProps(codes)
-funcProps.nameProps('hello')
-
 module.exports = { funcProps }
