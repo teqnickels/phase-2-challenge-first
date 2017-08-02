@@ -1,7 +1,6 @@
 import chai, { expect } from 'chai'
 import chaiChange from 'chai-change'
 import { dateObj } from '../part-1/date'
-var should = require('chai').should();
 
 chai.use(chaiChange)
 
@@ -13,9 +12,9 @@ describe('dateObj', () => {
   })
 
   context( 'dateObj.format()', () => {
-  it( 'takes a date in the format of "00/00/0000" and returns the month of the year',() => {
+  it( 'takes a date in the format of "00/00/0000" and returns returns a formatted date unless entry is invalid in which an error will be thrown',() => {
 
-    expect(dateObj.format('September 7th 1992')).to.throw('Invalid Entry undefined')
+    expect(dateObj.format.bind('September 7th 1992')).to.throw('Invalid Entry undefined')
       })
     })
 
