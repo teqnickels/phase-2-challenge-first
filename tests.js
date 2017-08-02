@@ -3,6 +3,7 @@ import chaiChange from 'chai-change'
 import { dateObj } from './part-1/functions'
 import { func } from './part-2/functions'
 import { funcProps } from './part-3/functions'
+import { filter } from './part-4/functions'
 
 chai.use(chaiChange)
 
@@ -63,6 +64,28 @@ describe('func', () => {
       expect( funcProps.nameProps(friend) ).to.eql([ 'age', 'name', 'phone' ])
       expect( funcProps.nameProps(family)).to.eql([ 'name' ])
       expect( funcProps.nameProps(codes)).to.equal('Invalid Entry')
+      })
+    })
+  })
+
+
+  describe('filter.filterBetween()', () => {
+    'use strict'
+
+    it('exists', () => {
+      expect( { filter } ).to.be.a('object')
+    })
+    context( 'filter.filterBetween()', () => {
+    it( 'takes an array and min and max value and returns an array with properties in alphabetical order between min and max',() => {
+
+      let arr = ['dog', 'cat', 'zebra', 'ape', 'lion', 'cow']
+
+      expect( filter.filterBetween(arr, 'deer', 'giraffe') ).to.eql([ 'dog' ])
+      expect( filter.filterBetween(arr, 'chimp', 'lobster') ).to.eql([ 'cow', 'dog', 'lion' ])
+      expect( filter.filterBetween(arr, 'chickadee', 'chimpanzee') ).to.eql([])
+      expect( filter.filterBetween(2, 'chickadee', 'chimpanzee') ).to.equal("Invalid input")
+      expect( filter.filterBetween(2, 2, 2) ).to.equal("Invalid input")
+
       })
     })
   })
