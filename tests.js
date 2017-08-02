@@ -1,6 +1,7 @@
 import chai, { expect } from 'chai'
 import chaiChange from 'chai-change'
-import { dateObj } from '../part-1/date'
+import { dateObj } from './part-1/functions'
+import { func } from './part-2/functions'
 
 chai.use(chaiChange)
 
@@ -24,6 +25,22 @@ describe('dateObj', () => {
     expect( dateObj.monthOfTheYear( '8/12/1981') ).to.equal( 'Aug' )
     expect( dateObj.monthOfTheYear( 'September 7th 1992') ).to.equal(undefined)
 
+      })
+    })
+})
+
+describe('func', () => {
+  'use strict'
+
+  it('exists', () => {
+    expect( { func } ).to.be.a('object')
+  })
+  context( 'func.reverseSentence()', () => {
+  it( 'takes a string and reverses it if there is more than one word in the string',() => {
+
+    expect( func.reverseSentence('I am testing this string.') ).to.equal( "'string. this testing am I'" )
+    expect( func.reverseSentence( 'string.' ) ).to.equal( "'string.'")
+    expect( func.reverseSentence( '123' ) ).to.equal( "'123'")
       })
     })
 

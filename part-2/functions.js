@@ -18,7 +18,4 @@ var func = {
   }
 }
 
-
-// func.reverseSentence( '123' )
-
 module.exports = { func }
