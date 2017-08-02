@@ -1,5 +1,9 @@
 var func = {
   reverseSentence : function reverseIt( str ) {
+    if(typeof(str) !== 'string') {
+      return 'invalid input'
+
+     }
     var reversedArr = [];
     var splitStr = str.split(' ')
     if(splitStr.length > 1) {
@@ -10,6 +14,7 @@ var func = {
       var reversed = "'" + reversedArr.toString() + "'"
       var exp = /\,/g
       var newStr = reversed.replace(exp," ")
+
       return newStr
     }
     if(splitStr.length < 2) {
@@ -18,7 +23,5 @@ var func = {
   }
 }
 
-
-// func.reverseSentence( '123' )
-
+func.reverseSentence(3432423432)
 module.exports = { func }

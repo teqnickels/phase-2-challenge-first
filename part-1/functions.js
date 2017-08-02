@@ -27,11 +27,5 @@ var dateObj = {
     }
   }
 }
-//
-// dateObj.monthOfTheYear( '7/12/1981' )
-// dateObj.monthOfTheYear( 'hello')
-// dateObj.monthOfTheYear( 'July 5th 1981')
-// dateObj.monthOfTheYear( '8/20/1999' )
-
 
 module.exports = { dateObj }
