@@ -15,12 +15,6 @@ var filter = {
   }
 }
 
-let arr1 = ['dog', 'cat', 'zebra', 'ape', 'lion', 'cow']
 
-filter.filterBetween(arr1, 'deer', 'giraffe')// => ['dog']
-filter.filterBetween(arr1, 'chimp', 'lobster')// => ['dog', 'lion', 'cow']
-filter.filterBetween(arr1, 'chickadee', 'chimpanzee') // => []
-filter.filterBetween(2, 'chickadee', 'chimpanzee') // => []
-filter.filterBetween(2, 2, 2) // => 'Invalid Input'
 
 module.exports = { filter }
