@@ -20,7 +20,6 @@ var dateObj = {
       var dateString = date.toString()
       var monthArr = dateString.split(' ')
       var month = monthArr[1]
-      console.log(month);
       return month
     }
     catch(error) {
