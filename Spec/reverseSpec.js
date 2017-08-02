@@ -15,6 +15,8 @@ describe('func', () => {
   it( 'takes a string and reverses it if there is more than one word in the string',() => {
 
     expect( func.reverseSentence('I am testing this string.') ).to.equal( "'string. this testing am I'" )
+    expect( func.reverseSentence( 'string.' ) ).to.equal( "'string.'")
+    expect( func.reverseSentence( '123' ) ).to.equal( "'123'")
       })
     })
 
