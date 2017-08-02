@@ -33,4 +33,4 @@ dateObj.monthOfTheYear( 'July 5th 1981')
 dateObj.monthOfTheYear( '8/20/1999' )
 
 
-// module.exports { funcs }
+module.exports { funcs }

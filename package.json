@@ -2,7 +2,6 @@
   "name": "phase-2-challenge-first",
   "version": "1.0.0",
   "description": "Phase 2 challenge first attempt",
-  "main": "index.js",
   "scripts": {
     "test": "part-1/test/date.js"
   },
@@ -19,6 +18,9 @@
   "devDependencies": {
     "chai": "^4.1.0",
     "chai-change": "^2.1.2",
-    "mocha": "^3.5.0"
+    "mocha": "^3.5.0",
+    "babel-cli": "^6.18.0",
+    "babel-preset-env": "^1.1.4",
+    "babel-register": "^6.18.0"
   }
 }
